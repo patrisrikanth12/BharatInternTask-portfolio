@@ -1,0 +1,132 @@
+body{
+    background-color: azure;
+}
+.pic img{
+    margin-left:88vh;
+    height:28vh;
+    width:28vh;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: black;
+}
+
+.skills {
+    display: flex;
+    justify-content: space-around;
+}
+
+.timeline  ul li{
+    float: left;
+    list-style: none;
+}
+.timeline::after{
+    content: '';
+    position: absolute;
+    width: 100vw;
+    height: .9vh;
+    background: teal;
+    top: 58vh;
+    left: 8vh;
+    z-index: -1;
+    animation: moveline 6s linear forwards;
+}
+
+@keyframes  moveline{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 73%;
+    }
+}
+
+.show{
+    width: max-content;
+    height: 20vh;
+    margin-left: 4vh;
+    margin-top: 3vh;
+    border-radius: 2vh;
+    border-top-left-radius: 0;
+    background-color: #ccc;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+.timeline input[type="radio"]:checked +label+.show{
+    max-height: 10vh;
+    padding: 0 ;
+}
+
+.pic img:hover{
+  transform: rotate(1deg);
+}
+h2{
+    text-decoration: underline;
+}
+li{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: blue;
+}
+.skill{
+    width: 10vh;
+    height: 10vh;
+}
+.socialmedia img{
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+}
+
+footer{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    background-color: #ccc;
+    color: black;
+}
+.socialmedia img:hover{
+    transform: rotate(3deg);
+}
+
+
+
+@media only screen and (max-width: 1140px) {
+    .socialmedia img{
+        margin-left: 18vh;
+        display: flex;
+    }
+    footer{
+        background-size: cover;
+        height: auto;
+        width: auto;
+    }
+    .pic img{
+        margin-left:5vh;
+    }
+
+    .timeline::after{
+       
+        width: 6px;
+        height: 20%;
+        top: 64vh;
+        left: 10vh;
+
+    }
+    
+    @keyframes  moveline{
+        0%{
+            height: 0;
+        }
+        100%{
+            height: 30%;
+        }
+    }
+}
